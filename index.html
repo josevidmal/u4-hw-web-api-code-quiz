@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>JS Code Quiz</title>
+        <link rel="stylesheet" href="assets/css/style.css" />
+    </head>
+
+    <body>
+        
+        <header>
+            <a id="highscores" href="#">View Highscores</a>
+            <h4 id="time">Time: </h4>
+        </header>
+
+        <main>
+            <section id="instructions">
+                <h1 id="quiz-title">Coding Quiz Challenge</h1>
+                <p id="intro">
+                    Try to answer the following code-related questions within the
+                    time limit. Keep in mind that incorrect answers will penalize
+                    your score/time by ten seconds!
+                </p>
+                <button id="start-button">Start Quiz</button>
+            </section>
+
+            <section id="q1" class="questions">
+                <p id="data-types">
+                    Commonly used data types DO NOT include:
+                </p>
+                <ol id="q1-options">
+                    <li class="q1-wrong"><button class="wrong">strings</button></li>
+                    <li class="q1-wrong"><button class="wrong">booleans</button></li>
+                    <li id="q1-correct"><button class="correct">alerts</button></li>
+                    <li class="q1-wrong"><button class="wrong">numbers</button></li>
+                </ol>
+            </section>
+
+            <section id="q2" class="questions">
+                <p id="if-statements">
+                    The condition in an if / else statement is enclosed within ______.
+                </p>
+                <ol id="q2-options">
+                    <li class="q2-wrong"><button class="wrong">quotes</button></li>
+                    <li class="q2-wrong"><button class="wrong">curly brackets</button></li>
+                    <li id="q2-correct"><button class="correct">parentheses</button></li>
+                    <li class="q2-wrong"><button class="wrong">square brackets</button></li>
+                </ol>
+            </section>
+
+            <section id="q3" class="questions">
+                <p id="arrays">
+                    Arrays in JavaScript can be used to store ______.
+                </p>
+                <ol id="q3-options">
+                    <li class="q3-wrong"><button class="wrong">numbers and strings</button></li>
+                    <li class="q3-wrong"><button class="wrong">other arrays</button></li>
+                    <li class="q3-wrong"><button class="wrong">booleans</button></li>
+                    <li id="q3-correct"><button class="correct">all of the above</button></li>
+                </ol>
+            </section>
+
+            <section id="q4" class="questions">
+                <p id="strings">
+                    String values must be enclosed within ______ when being assigned to variables.
+                </p>
+                <ol id="q4-options">
+                    <li class="q4-wrong"><button class="wrong">commas</button></li>
+                    <li class="q4-wrong"><button class="wrong">curly brackets</button></li>
+                    <li id="q4-correct"><button class="correct">quotes</button></li>
+                    <li class="q4-wrong"><button class="wrong">parentheses</button></li>
+                </ol>
+            </section>
+
+            <section id="q5" class="questions">
+                <p id="console-log">
+                    A very useful tool used during development and debugging for printing
+                    content to the debugger is:
+                </p>
+                <ol id="q5-options">
+                    <li class="q5-wrong"><button class="wrong">JavaScript</button></li>
+                    <li class="q5-wrong"><button class="wrong">terminal / bash</button></li>
+                    <li class="q5-wrong"><button class="wrong">for loops</button></li>
+                    <li id="q5-correct"><button class="correct">console.log</button></li>
+                </ol>
+            </section>
+
+            <section id="all-done">
+                <p id="finish">
+                    All done!
+                </p>
+                <p id="final-score">
+                    Your final score is: 
+                </p>
+                <form>
+                    <label id="initials">Enter initials: </label>
+                    <input type="text">
+                    <input type="submit">
+                </form>
+            </section>
+        </main>
+
+    </body>
+
+</html>
