@@ -1,0 +1,57 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button, #submit-button {
+    background-color: rgb(110, 33, 110);
+    border: none;
+    color: white;
+    width: 25%;
+    font-size: 16px;
+    margin: 0.5%;
+    padding: 1%;
+    border-radius: 5px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    margin: 0% 5%;
+}
+
+main {
+    display:flex;
+    flex-direction: column;
+    padding: 0% 20% 5% 20%;
+}
+
+#instructions {
+    text-align: center;
+    margin: 0% 0% 2% 0%;
+}
+
+#instructions h1 {
+    font-size: 35px;
+    margin: 2%;
+}
+
+#instructions p, #final-score, #initials {
+    margin: 2%;
+}
+
+.questions {
+    text-align: left;
+    margin: 0% 0% 2% 0%;
+}
+
+.questions p, #finish {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0% 0% 3% 0%;
+    padding: 0% 10% 0% 0%;
+}
+
