@@ -15,6 +15,15 @@ button {
     border-radius: 5px;
 }
 
+button:hover {
+    cursor: pointer;
+    background-color: rgb(167, 94, 167);
+}
+
+button:active {
+    box-shadow: 0px 0px 10px 5px lightskyblue;
+}
+
 main {
     display:flex;
     flex-direction: row;
