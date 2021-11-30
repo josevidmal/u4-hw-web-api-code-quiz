@@ -20,19 +20,33 @@ var q4Wrong = document.getElementsByClassName("q4-wrong");
 var q5 = document.getElementById("q5");
 var q5Answers = document.querySelectorAll(".q5-answers");
 var q5Correct = document.getElementById("q5-correct");
-var q5Wrong = document.getElementsByClassName("q5-wrong");
+var q5Wrong = document.querySelectorAll(".q5-wrong");
 var allDone = document.getElementById("all-done");
 var wrongAnswers = document.querySelectorAll(".wrong");
 
 var timeEl = document.getElementById("time");
 var secondsLeft = 75;
 
+for (var i = 0; i < wrongAnswers.length; i++) {
+    wrongAnswers[i].addEventListener("click", function() {
+        secondsLeft -= 10;
+        timeEl.textContent = secondsLeft;
+        if (secondsLeft < 0) {
+            secondsLeft = 0;
+            timeEl.textContent = secondsLeft;
+        }
+    });
+}
+
 function setTime() {
     var timerInterval = setInterval(function() {
-        secondsLeft--;
-        timeEl.textContent = secondsLeft;
+        if (secondsLeft > 0) {
+            secondsLeft--;
+        } else {
+            secondsLeft = 0;
+        }
 
-        if (secondsLeft === 0) {
+        if (secondsLeft === 0 || secondsLeft < 0) {
             clearInterval(timerInterval);
             for (var i = 0; i < questions.length; i++) {
                 questions[i].setAttribute("style", "display: none");
@@ -40,17 +54,13 @@ function setTime() {
             allDone.setAttribute("style", "display: block");
         }
 
-            /*for (var i = 0; i < wrongAnswers.length; i++) {
-                wrongAnswers[i].addEventListener("click", function() {
-                    secondsLeft -= 10;
-                });
-            };*/
-
         q5Answers.forEach(item => {
-            item.addEventListener("click", function() {
+            item.addEventListener("click", function() {   
                 clearInterval(timerInterval);
             });
-        });    
+        });
+
+        timeEl.textContent = secondsLeft;
     }, 1000);
 }
 
