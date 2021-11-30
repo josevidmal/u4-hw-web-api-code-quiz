@@ -49,7 +49,7 @@ main {
 }
 
 #instructions p, #final-score, #initials {
-    margin: 2%;
+    margin: 2% 0%;
 }
 
 .questions {

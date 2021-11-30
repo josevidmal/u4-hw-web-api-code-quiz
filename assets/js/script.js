@@ -23,6 +23,7 @@ var q5Correct = document.getElementById("q5-correct");
 var q5Wrong = document.querySelectorAll(".q5-wrong");
 var allDone = document.getElementById("all-done");
 var wrongAnswers = document.querySelectorAll(".wrong");
+var score = document.getElementById("score");
 
 var timeEl = document.getElementById("time");
 var secondsLeft = 75;
@@ -31,9 +32,11 @@ for (var i = 0; i < wrongAnswers.length; i++) {
     wrongAnswers[i].addEventListener("click", function() {
         secondsLeft -= 10;
         timeEl.textContent = secondsLeft;
+        score.textContent = secondsLeft;
         if (secondsLeft < 0) {
             secondsLeft = 0;
             timeEl.textContent = secondsLeft;
+            score.textContent = secondsLeft;
         }
     });
 }
@@ -61,6 +64,7 @@ function setTime() {
         });
 
         timeEl.textContent = secondsLeft;
+        score.textContent = secondsLeft;
     }, 1000);
 }
 
@@ -103,4 +107,11 @@ q5Answers.forEach(item => {
         q5.setAttribute("style", "display: none");
         allDone.setAttribute("style", "display: block");
     });
+});
+
+var submitButton = document.getElementById("submit-button");
+
+submitButton.addEventListener("click", function(event) {
+    event.preventDefault();
+    window.location.href="assets/highscores.html";
 });
