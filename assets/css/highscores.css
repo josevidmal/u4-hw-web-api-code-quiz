@@ -38,6 +38,22 @@ h1 {
     margin: 2%;
 }
 
+ol {
+    flex: 0 0 80%;
+}
+
+li {
+    flex: 0 0 100%;
+    background-color: rgb(185, 131, 185);
+    border: none;
+    margin: 1%;
+    padding: 1%;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
 #back {
     flex: 0 0 45%;
 }
