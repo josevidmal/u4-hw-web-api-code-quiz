@@ -6,19 +6,19 @@ var scoreBoard = document.querySelector("#score-board");
 
 function renderScores() {
 
-    var lastScore = JSON.parse(localStorage.getItem("userScore"));
-
-    var newTag = document.createElement("li");
+    var lastScore = JSON.parse(localStorage.getItem("highScores"));
+    lastScore.sort((a, b) => b.score - a.score);
     
+for (var i = 0; i < lastScore.length; i++) {
     if (lastScore !== null) {
+        var newTag = document.createElement("li");
         scoreBoard.appendChild(newTag);
-        scoreBoard.lastChild.textContent = lastScore.initials + " - " + lastScore.score;      
+        newTag.textContent = lastScore[i].initials + " - " + lastScore[i].score;      
     } else {
         return;
     }
+    }
 }
-
-init();
 
 var back = document.getElementById("back");
 back.addEventListener("click", function() {
@@ -30,3 +30,5 @@ clear.addEventListener("click", function() {
     scoreBoard.innerHTML = "";
     localStorage.clear();
 })
+
+init();

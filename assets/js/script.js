@@ -12,7 +12,10 @@ var q4Answers = document.querySelectorAll(".q4-answers");
 var q5 = document.getElementById("q5");
 var q5Answers = document.querySelectorAll(".q5-answers");
 var allDone = document.getElementById("all-done");
+var correctAnswers = document.querySelectorAll(".correct");
 var wrongAnswers = document.querySelectorAll(".wrong");
+var wrongMessage = document.getElementById("wrong");
+var correctMessage = document.getElementById("correct");
 var score = document.getElementById("score");
 var userInitials = document.getElementById("user-initials");
 
@@ -100,6 +103,26 @@ q5Answers.forEach(item => {
     });
 });
 
+wrongAnswers.forEach(item => {
+    item.addEventListener("click", function() {
+        wrongMessage.setAttribute("style", "display: block");
+        correctMessage.setAttribute("style", "display: none");
+        setTimeout(function() {
+            wrongMessage.setAttribute("style", "display: none");
+        }, 800);
+    });
+});
+
+correctAnswers.forEach(item => {
+    item.addEventListener("click", function() {
+        correctMessage.setAttribute("style", "display: block");
+        wrongMessage.setAttribute("style", "display: none");
+        setTimeout(function() {
+            correctMessage.setAttribute("style", "display: none");
+        }, 800);
+    });
+});
+
 var submitButton = document.getElementById("submit-button");
 
 submitButton.addEventListener("click", function(event) {
@@ -110,7 +133,18 @@ submitButton.addEventListener("click", function(event) {
         initials: userInitials.value
     };
 
-    localStorage.setItem("userScore", JSON.stringify(userScore));
+    var localStorageContent = localStorage.getItem("highScores");
+
+    var highScores;
+    if (localStorageContent === null) {
+        highScores = [];
+    } else {
+        highScores = JSON.parse(localStorageContent);
+    }
+    
+    highScores.push(userScore);
+
+    localStorage.setItem("highScores", JSON.stringify(highScores));
 
     window.location.href="assets/highscores.html";
 });
