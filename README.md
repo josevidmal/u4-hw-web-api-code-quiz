@@ -21,15 +21,15 @@ https://josevidmal.github.io/u4-hw-web-api-code-quiz/
 
 Technologies used: 
 
-HTML
-CSS
-JavaScript
-Web APIs
+*HTML
+*CSS
+*JavaScript
+*Web APIs
 
 Contact information: 
 
-José Vidal
-email: josevidmal@gmail.com
+*José Vidal
+*email: josevidmal@gmail.com
 
 Licence:
 
