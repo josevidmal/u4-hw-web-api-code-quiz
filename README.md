@@ -7,10 +7,30 @@ For this activity I started writing all the html code to display all the element
 
 Now, for the functionality with JavaScript, first I set all the variables to manipulate the html elements with the DOM. After that, I wrote the functions to start the timer using setInterval and to reduce 10 seconds if a wrong answer is selected for each question. For the next part of I added Event Listeners for all the possible answers (buttons). To display each question after another I set attributes for style regarding display none and display block. I used setTimeout to display the "Correct!" and "Wrong!" messages and make them disappear after some time. Then, I used objects, arrays, preventDefault and localStorage to make the Submit button set the score and user initials in the browser's local storage. For the Highscores website I used function init() so that as soon as the webpage is loaded a function transforms the string values in the local storage into objects (with a sort() method to organize them in descending order), then a &lt;li&gt; element is created and appended to a &lt;ol&gt; element, adding at last the object initials value and score value (this is done with a for loop to register all the scores that are set in the local storage). Finally I used window.location.href for the Go Back button and localStorage.clear() for the Clear Highscores button.
 
-The final website looks like this image:
+The final website looks like this images:
 
 ![JS Code Quiz](./assets/coding-quiz-challenge.png)
+
+![JS Code Quiz](./assets/coding-quiz-challenge-questions.png)
+
+![JS Code Quiz](./assets/coding-quiz-challenge-score.png)
 
 The link for the deployed application is this:
 
 https://josevidmal.github.io/u4-hw-web-api-code-quiz/
+
+Technologies used: 
+
+HTML
+CSS
+JavaScript
+Web APIs
+
+Contact information: 
+
+José Vidal
+email: josevidmal@gmail.com
+
+Licence:
+
+This project is licensed under the terms of the MIT license.
