@@ -31,6 +31,6 @@ Contact information:
 * José Vidal
 * email: josevidmal@gmail.com
 
-Licence:
+License:
 
 This project is licensed under the terms of the MIT license.
